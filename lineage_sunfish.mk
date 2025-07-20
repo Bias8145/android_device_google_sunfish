@@ -10,6 +10,32 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/google/sunfish/aosp_sunfish.mk)
 
+# Maintainer name
+AXION_MAINTAINER := khaliq
+
+# Processor name (use "_" for spaces)
+AXION_PROCESSOR := Snapdragon 730G
+
+# Define rear camera specs (multiple sensors supported)
+AXION_CAMERA_REAR_INFO := 12
+
+# Define front camera specs
+AXION_CAMERA_FRONT_INFO := 8
+
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_VIPERFX := true
+TARGET_INCLUDES_LOS_PREBUILTS := true
+BYPASS_CHARGE_SUPPORTED := true
+
+# CPUsets configuration
+AXION_CPU_BG := 0-3
+AXION_CPU_FG := 0,3-5,7
+AXION_CPU_LIMIT_BG := 0-1
+AXION_CPU_UNLIMIT_UI := 0-7
+AXION_CPU_LIMIT_UI := 0-5
+AXION_CPU_DISPLAY := 6-7
+AXION_CPU_AUDIO := 0-4
+
 include device/google/sunfish/device-lineage.mk
 
 # Device identifier. This must come after all inclusions

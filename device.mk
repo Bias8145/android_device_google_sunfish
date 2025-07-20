@@ -788,3 +788,6 @@ PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SM7150
 
 # Update soong config namespace
 -include vendor/google/build/soong/soong_config_namespace/qcril_oemhook.mk
+
+# Viper 4 FX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
