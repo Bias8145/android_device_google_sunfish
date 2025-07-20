@@ -671,8 +671,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.hwui.renderer=skiagl \
     debug.renderengine.backend=skiaglthreaded \
-    debug.composition.type=gpu \
-    persist.sys.composition.type=gpu
+    debug.composition.type=skiagl \
+    persist.sys.composition.type=skiagl
 
 # Dalvik Virtual Machine
 PRODUCT_PRODUCT_PROPERTIES += \
