@@ -45,7 +45,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENABLE_UFFD_GC := true
 
 # Lineage Health
-include hardware/google/pixel/lineage_health/device.mk
+#include hardware/google/pixel/lineage_health/device.mk
 
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/sm7150_bms/charge_disable)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
@@ -70,7 +70,7 @@ PRODUCT_PACKAGES += \
     RcsService
 
 # Touch
-include hardware/google/pixel/touch/device.mk
+#include hardware/google/pixel/touch/device.mk
 
 # Build necessary packages for vendor
 

@@ -52,11 +52,27 @@ ifneq (REL,$(PLATFORM_VERSION_CODENAME))
   PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 endif
 
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+include device/google/sunfish/device-aosp.mk
+
 # STOPSHIP deal with Qualcomm stuff later
 # PRODUCT_RESTRICT_VENDOR_FILES := all
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_sunfish
 PRODUCT_DEVICE := sunfish
-PRODUCT_MODEL := AOSP on sunfish
+PRODUCT_MODEL := Pixel 4a
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2340
+TARGET_SCREEN_WIDTH := 1080
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="sunfish-user 13 TQ3A.230805.001.S1 10786265 release-keys" \
+    BuildFingerprint=google/sunfish/sunfish:13/TQ3A.230805.001.S1/10786265:user/release-keys \
+    DeviceProduct=sunfish
+
+$(call inherit-product, vendor/google/sunfish/sunfish-vendor.mk)
