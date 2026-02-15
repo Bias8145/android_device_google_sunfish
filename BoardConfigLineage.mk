@@ -3,6 +3,8 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+BUILD_BROKEN_DUP_RULES := true
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.lz4
@@ -17,6 +19,7 @@ AB_OTA_PARTITIONS += \
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Reserve space for gapps install
+WITHOUT_RESERVED_SIZE := true
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
 # SELinux

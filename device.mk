@@ -680,3 +680,5 @@ PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SM7150
 
 # Update soong config namespace
 -include vendor/google/build/soong/soong_config_namespace/qcril_oemhook.mk
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST := %
