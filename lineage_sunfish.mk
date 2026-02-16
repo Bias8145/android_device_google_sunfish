@@ -5,6 +5,7 @@
 #
 
 # Inherit some common Lineage stuff.
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
@@ -20,6 +21,32 @@ PRODUCT_NAME := lineage_sunfish
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
+TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_VIPERFX := true
+TARGET_INCLUDE_VIPERFX := true
+TARGET_INCLUDES_LOS_PREBUILTS := true
+BYPASS_CHARGE_SUPPORTED := true
+
+# Camera information
+AXION_CAMERA_REAR_INFO := 12.2
+AXION_CAMERA_FRONT_INFO := 8
+
+# Maintainer name
+AXION_MAINTAINER := khaliq
+
+# Processor name
+AXION_PROCESSOR := Snapdragon_730G
+
+# CPUsets configuration
+AXION_CPU_BG := 0-3
+AXION_CPU_FG := 0,3-5,7
+AXION_CPU_LIMIT_BG := 0-1
+AXION_CPU_UNLIMIT_UI := 0-7
+AXION_CPU_LIMIT_UI := 0-5
+AXION_CPU_DISPLAY := 6-7
+AXION_CPU_AUDIO := 0-4
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="sunfish-user 13 TQ3A.230805.001.S1 10786265 release-keys" \
