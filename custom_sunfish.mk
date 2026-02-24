@@ -53,7 +53,7 @@ ifneq (REL,$(PLATFORM_VERSION_CODENAME))
 endif
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 include device/google/sunfish/device-aosp.mk
 
@@ -62,7 +62,7 @@ include device/google/sunfish/device-aosp.mk
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := aosp_sunfish
+PRODUCT_NAME := custom_sunfish
 PRODUCT_DEVICE := sunfish
 PRODUCT_MODEL := Pixel 4a
 

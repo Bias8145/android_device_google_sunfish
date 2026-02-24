@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_sunfish.mk \
+    $(LOCAL_DIR)/custom_sunfish.mk \
     $(LOCAL_DIR)/aosp_sunfish_hwasan.mk \
 
 COMMON_LUNCH_CHOICES := \
-    aosp_sunfish-trunk_staging-userdebug \
+    custom_sunfish-trunk_staging-userdebug \
